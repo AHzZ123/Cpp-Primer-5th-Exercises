@@ -3,7 +3,7 @@
 std::allocator<char> String::alloc;
 
 String::String(const_iterator ci) : String() {
-  while (ci && *ci != '\0')     // This constructor doesn't cap???
+  while (ci && *ci != '\0')     // This constructor doesn't reassign cap???
     push_back(*ci++);
 }
 
