@@ -4,7 +4,7 @@ std::allocator<char> String::alloc;
 
 String::String(const_iterator ci) : String() {
   while (ci && *ci != '\0')     // This constructor doesn't reassign cap???
-    push_back(*ci++);
+    push_back(*ci++);           // The data member can be assigned correctly when calling reallocate!!
 }
 
 String::String(std::initializer_list<char> il) : String() {
